@@ -11,7 +11,6 @@ export default function createStore() {
       logger,
     )
   );
-
   return store;
 }
 
