@@ -1,4 +1,4 @@
-import { Z_DEFAULT_STRATEGY } from "zlib";
+import { Z_DEFAULT_STRATEGY } from "zlib"; // eslint-disable-line
 
 const initialState = {
     todoList: []
@@ -16,7 +16,7 @@ const initialState = {
       case 'DEL_TODO' :
         const deltodo = action.payload.deltodo;
         const delState = Object.assign({}, state);
-        delState.todoList.push(deltodo);
+        delState.todoList.pop(deltodo);
         return delState;
       default:
         return state;
