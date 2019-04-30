@@ -10,12 +10,12 @@ export default class Todo extends React.Component {
 
     // StoreのTodoからリストを生成
     const list = this.props.todo.todoList.map((todo, index) => <li key={index}>{todo}</li>)
+    // <button onClick={() => this.props.changeTodo(this.state.todo)}>変更</button></li>)
 
     return (
       <div>
         <input type="text" onChange={elm => this.setState({ todo: elm.target.value })} />
-        <button onClick={() => this.props.addTodo(this.state.todo)}>追加</button><br />
-        <button onClick={() => this.props.delTodo(this.state.deltodo)}>削除</button>
+        <button onClick={() => this.props.addTodo(this.state.todo)}>追加</button>
         <ul>
           {list}
         </ul>
