@@ -6,8 +6,16 @@ export default class Todo extends React.Component {
   }
 
   render() {
+    console.log(this.props);
+
+    const { addTodo, delTodo, delById } = this.props; // eslint-disable-line
+
     // StoreのTodoからリストを生成
-    const list = this.props.todo.todoList.map(e => <li key={e.id}>{e.todo}</li>);
+    const list = this.props.todo.todoList.map(e => 
+      <li key={e.id}>
+        {e.todo}
+      </li>
+    );
 
     return (
       <div>
