@@ -12,7 +12,7 @@ export default class Todo extends React.Component {
 
     // StoreのTodoからリストを生成
     const list = this.props.todo.todoList.map(e => 
-      <li key={e.id}>
+      <li data-id={e.id} key={e.id}>
         {e.todo}
       </li>
     );
